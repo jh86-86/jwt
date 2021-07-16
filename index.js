@@ -3,6 +3,7 @@ const auth = require("./routes/auth");
 
 const app = express();
 
+app.use(express.json())  //lets app use json on request...needs to be above auth
 app.use("/auth", auth);
 
 app.get('/', (req,res)=>{
